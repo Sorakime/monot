@@ -220,7 +220,7 @@ class Tab {
       browserView.webContents.getUserAgent()
         .replace('monot', 'Chrome')
         .replace(/Electron\/[0-9 | .]/, '')
-        .replace('Chrome/2.0.0', '')
+        .replace('Chrome/2.0.1', '')
     );
 
     try {
