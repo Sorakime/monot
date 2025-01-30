@@ -1,7 +1,7 @@
 {
   "name": "monot",
   "homepage": "https://mncrp.github.io/project/monot",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "The new web browser \"Monot\" by monochrome.",
   "main": "src/main/main.js",
   "repository": "https://github.com/mncrp/monot/",
@@ -15,7 +15,7 @@
   "author": "monochrome Project.",
   "license": "ISC",
   "devDependencies": {
-    "electron": "^24.1.1",
+    "electron": "^30.0.9",
     "electron-builder": "^23.3.3",
     "eslint": "^8.5.0",
     "eslint-plugin-node": "^11.1.0"

@@ -20,6 +20,10 @@ const bookmark = new LowLevelConfig('bookmark.mndata').copyFileIfNeeded(`${direc
 let windowSize;
 if (monotConfig.update().get('ui') === 'thin') viewY = 29;
 
+function replaceBackslashes(str) {
+  return str.replace(/\\/g, "\/");
+}
+
 class ViewY {
   constructor() {
     this.type = monotConfig.update().get('ui');
@@ -304,7 +308,7 @@ class Tab {
       if (monotConfig.get('cssTheme') !== '') {
         const style = monotConfig.get('cssTheme');
         browserView.webContents.executeJavaScript(`
-          document.head.innerHTML += '<link rel="stylesheet" href="${style}">'
+          document.head.innerHTML += '<link rel="stylesheet" href="${replaceBackslashes(style)}">'
         `);
       }
 

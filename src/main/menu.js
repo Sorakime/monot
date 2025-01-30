@@ -98,7 +98,11 @@ const menuTemplate = [
       },
       {
         role: 'hide',
-        label: lang.get('hide')
+        label: lang.get('hide'),
+        accelerator: 'CmdOrCtrl+H',
+        click: () => {
+          global.win.hide();
+        }
       },
       {
         type: 'separator'
@@ -429,7 +433,7 @@ const menuTemplate = [
         label: lang.get('document'),
         click: () => {
           if (global.tabs.get() !== null) {
-            global.tabs.get().load('https://mncrp.github.io/document/monot/');
+            global.tabs.get().load('https://mncrp.github.io/docs/monot/');
           }
         }
       }
